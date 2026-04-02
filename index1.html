@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Industry Readiness Program – Zhapix</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
 </head>
@@ -14,9 +14,12 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <a href="#" class="logo" aria-label="Zhapix Home" onclick="event.preventDefault(); location.reload();">
-      <img src="zhapix  logo_latest.png" alt="Zhapix" style="height:44px;width:auto;" />
+    <a href="#" class="logo" aria-label="Zhapix Home"
+      onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); setTimeout(() => location.reload(), 500);"
+      title="Zhapix IRP">
+      <img src="white text logo.png" alt="Zhapix" style="height:49px;width:auto;" />
     </a>
+    <span class="btn-login">Login</span>
   </nav>
 
   <section class="hero">
@@ -29,7 +32,8 @@
     <div class="hero__content">
       <h1 class="hero__title">Industry Readiness Program</h1>
       <p class="hero__desc">Ready to launch your journey into the IT world of your dreams?</p>
-      <a href="#" class="btn-apply" role="button">Apply Now</a>
+      <a href="https://forms.zhapix.com/zhapix/form/IndustryReadinessProgram/formperma/Z4_EwT_Z39xYLJvcsZredeZYDDczXJsLLbadf8ahW8Q"
+        class="btn-apply" role="button" target="_blank" rel="noopener noreferrer">Apply Now</a>
     </div>
 
   </section>
@@ -289,9 +293,9 @@
 
         <div class="faq__item">
           <h3 class="faq__q">Can I skip the Bootcamp if I already know the MERN stack?</h3>
-          <p class="faq__a">Sure. You can send an email to irp.contact@zhapix.com expressing your
-            interest. You will go through an interview process, and upon successful evaluation, you will be onboarded as
-            an intern.</p>
+          <p class="faq__a">Sure.You can send an email to <a
+              href="mailto:irp.contact@zhapix.com">irp.contact@zhapix.com</a> expressing your interest. You will then go
+            through an interview process, and upon successful evaluation, you will be onboarded as an intern.</p>
         </div>
 
         <div class="faq__item">
@@ -332,7 +336,8 @@
           </svg>
         </div>
         <h3 class="footer__label">Email</h3>
-        <p class="footer__text">irp.contact@zhapix.com</p>
+        <p class="footer__text"><a href="mailto:irp.contact@zhapix.com" class="footer__link">irp.contact@zhapix.com</a>
+        </p>
       </div>
 
       <div class="footer__item">
@@ -348,4 +353,4 @@
 
     </div>
     <div class="footer__copy">
-      <p>Copyright © 2026 Zhapix Technologies (OPC) Private Limited ™ | All Rights Reserved</p>
+      <p>Copyright © 2026 Zhapix ™ | All Rights Reserved</p>
