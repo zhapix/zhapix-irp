@@ -49,7 +49,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(3, 34, 45, 0.8);
+  background: rgba(3, 34, 45, 0.6);
 }
 
 /* Animated grid / circuit-board overlay */
@@ -79,12 +79,18 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 18px 36px;
   background: rgba(6, 12, 30, 0.92);
   backdrop-filter: blur(10px);
+}
+
+.navbar__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -312,7 +318,7 @@ body {
 
 /* ── ABOUT SECTION ── */
 .about {
-  background: #09233c;
+  background: #031525;
   width: 100%;
   padding: 64px 0 32px;
 }
@@ -426,7 +432,7 @@ body {
 
 /* ── MENTOR SECTION ── */
 .mentor {
-  background: #09233c;
+  background: #031525;
   width: 100%;
   padding: 60px 0;
 }
@@ -436,14 +442,14 @@ body {
   margin: 0 auto;
   padding: 0 56px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 48px;
 }
 
 .mentor__image {
   flex: 0 0 200px;
   width: 200px;
-  height: 220px;
+  height: 180px;
   border-radius: 10px;
   overflow: hidden;
   margin-top: -10px;
@@ -534,6 +540,7 @@ body {
 .why__bg {
   position: absolute;
   inset: 0;
+  background-image: url("why-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -695,13 +702,13 @@ body {
 }
 
 .spec__card {
-  background-color: #091a26;
+  background-color: #031525;
   background-image: unset;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid rgba(41, 121, 255, 0.25);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 36px 32px;
   display: flex;
   flex-direction: column;
@@ -712,7 +719,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
-  color: #f5c518;
+  color: rgb(244, 244, 78);
 }
 
 .spec__card-desc {
@@ -785,6 +792,7 @@ body {
 .irp__bg {
   position: absolute;
   inset: 0;
+  background-image: url("irp-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -820,7 +828,7 @@ body {
 
 .irp__card {
   width: 100%;
-  background-color: #091a26;
+  background-color: #031525;
   border-radius: 12px;
   padding: 48px 56px;
   display: flex;
@@ -848,9 +856,9 @@ body {
 
 .irp__sub {
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 700;
-  color: #f5c518;
+  color: rgb(244, 244, 78);
   margin-top: 16px;
 }
 
@@ -961,12 +969,12 @@ body {
 }
 
 .journey__card {
-  background-color: #091a26;
+  background-color: #031525;
   border-radius: 10px;
   padding: 36px 28px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 
 .journey__phase {
@@ -1023,6 +1031,7 @@ body {
 .faq__bg {
   position: absolute;
   inset: 0;
+  background-image: url("faq-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1071,7 +1080,7 @@ body {
 
 .faq__q {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 600;
   color: #2dd4bf;
   line-height: 1.5;
@@ -1079,7 +1088,7 @@ body {
 
 .faq__a {
   font-family: "Poppins", sans-serif;
-  font-size: 0.93rem;
+  font-size: 14px;
   font-weight: 400;
   color: #ffffff;
   line-height: 1.5;
@@ -1136,6 +1145,7 @@ body {
   right: 0;
   bottom: 0;
   width: 100%;
+  background-image: url("footer-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
