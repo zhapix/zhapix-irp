@@ -76,21 +76,20 @@ body {
 
 /* ── NAV BAR ── */
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 18px 36px;
-  background: #020E16;
-  backdrop-filter: blur(10px);
+    height: 100px;
+      position: sticky;
+    padding: 0 20px;      /* Adjust horizontal padding */
+    display: flex;
+    align-items: center;  /* Keeps content centered vertically */
+    background-color: #020E16; /* Ensure background matches your theme */
 }
 
 .navbar__container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;    /* Limits how wide the nav content spreads */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
@@ -1163,7 +1162,6 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 60px 40px 40px;
   display: grid;
