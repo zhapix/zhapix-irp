@@ -4,6 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2979ff" />
+    <meta name="description" content="Ready to launch your journey into the IT world of your dreams? Join Zhapix Industry Readiness Program." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Zhapix IRP" />
+    <meta name="application-name" content="Zhapix IRP" />
+    <meta name="msapplication-TileColor" content="#2979ff" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/icon-16x16.png" />
+    
     <title>Industry Readiness Program – Zhapix</title>
     <link rel="icon" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet" />
@@ -19,7 +36,7 @@
             <a href="#" class="logo" aria-label="Zhapix Home"
                 onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); setTimeout(() => location.reload(), 500);"
                 title="Zhapix IRP">
-                <img src="assets/white text logo.png" alt="Zhapix" style="height:49px;width:auto;">
+                <img src="assets/white_text_logo.png" alt="Zhapix" style="height:49px;width:auto;">
             </a>
             <span class="btn-login">Login</span>
         </div>
@@ -433,6 +450,66 @@
                 </div>
             </div>
         </div>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install button or banner here
+            console.log('Install prompt ready');
+            
+            // Example: Show install button after 3 seconds
+            setTimeout(() => {
+                const installBtn = document.createElement('button');
+                installBtn.textContent = 'Install App';
+                installBtn.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background: #2979ff;
+                    color: white;
+                    border: none;
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    z-index: 9999;
+                    box-shadow: 0 4px 12px rgba(41, 121, 255, 0.3);
+                `;
+                
+                installBtn.addEventListener('click', () => {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('User accepted the install prompt');
+                        } else {
+                            console.log('User dismissed the install prompt');
+                        }
+                        deferredPrompt = null;
+                        installBtn.remove();
+                    });
+                });
+                
+                document.body.appendChild(installBtn);
+            }, 3000);
+        });
+    </script>
 
 </body>
 
