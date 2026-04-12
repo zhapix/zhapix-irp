@@ -2,12 +2,12 @@
   "name": "Industry Readiness Program - Zhapix",
   "short_name": "Zhapix IRP",
   "description": "Ready to launch your journey into the IT world of your dreams? Join Zhapix Industry Readiness Program.",
-  "start_url": "/",
+  "start_url": "/zhapix-irp",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2979ff",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "scope": "/zhapix-irp",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
