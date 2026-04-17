@@ -14,7 +14,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" data-testid="navbar">
         <div class="navbar__container">
             <a href="#" class="logo" aria-label="Zhapix Home"
                 onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); setTimeout(() => location.reload(), 500);"
@@ -25,7 +25,7 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero"  data-testid="hero-section">
 
         <!-- Layered background -->
         <div class="hero__bg"></div>
@@ -59,7 +59,7 @@
 
 
     <!-- ── ABOUT COMPANY SECTION ── -->
-    <section class="about">
+    <section class="about" data-testid="about-company">
         <div class="about__container">
             <div class="about__content">
                 <h2 class="about__title">About Company</h2>
@@ -82,7 +82,7 @@
 
 
     <!-- ── ABOUT MENTOR SECTION ── -->
-    <section class="mentor">
+    <section class="mentor" data-testid="about-mentor">
         <div class="mentor__container">
             <div class="mentor__image">
                 <img src="assets/mentor-photo.png" alt="Vijayan Thanigaivelu" />
@@ -108,7 +108,7 @@
 
 
     <!-- ── WHY CHOOSE SECTION ── -->
-    <section class="why">
+    <section class="why" data-testid="why-choose">
         <div class="why__bg"></div>
         <div class="why__overlay"></div>
         <div class="why__container">
@@ -159,7 +159,7 @@
     </section>
 
 
-     <section class="specialization">
+     <section class="specialization" data-testid="specialization">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Choose Your Specialization</h2>
@@ -219,7 +219,7 @@
   </section>
 
     <!-- ── IRP PROGRAM STRUCTURE SECTION ── -->
-    <section class="irp">
+    <section class="irp" data-testid="irp-structure">
         <div class="irp__bg"></div>
         <div class="irp__overlay"></div>
         <div class="irp__container">
@@ -257,7 +257,7 @@
 
 
     <!-- ── YOUR TRANSFORMATION JOURNEY SECTION ── -->
-    <section class="journey">
+    <section class="journey" data-testid="journey">
         <div class="journey__container">
             <h2 class="journey__title">Your Transformation Journey</h2>
             <p class="journey__subtitle">A clear sequential roadmap to becoming an industry professional</p>
@@ -296,7 +296,7 @@
 
 
     <!-- ── FAQ SECTION ── -->
-    <section class="faq">
+    <section class="faq"  data-testid="faq">
         <div class="faq__bg"></div>
         <div class="faq__overlay"></div>
         <div class="faq__container">
@@ -356,7 +356,7 @@
 
 
     <!-- ── FOOTER SECTION ── -->
-    <footer class="footer" style="border-top:none;margin-top:0;">
+    <footer class="footer"  data-testid="footer" style="border-top:none;margin-top:0;">
         <div class="footer__bg"></div>
         <div class="footer__overlay"></div>
         <div class="footer__container">
@@ -401,7 +401,7 @@
     </footer>
 
    
-        <div class="footer__copy">
+        <div class="footer__copy"  data-testid="footer-copy">
             <p>Copyright © 2026 Zhapix ™ | All Rights Reserved</p>
         </div>
 
