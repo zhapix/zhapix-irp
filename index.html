@@ -453,9 +453,12 @@
 
     <!-- PWA Service Worker Registration -->
     <script>
+
+        /* To be reverted back once we deploy in main domain
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/zhapix-irp/sw.js')
+                navigator.serviceWorker.register('/sw.js')
                     .then(registration => {
                         console.log('ServiceWorker registration successful with scope: ', registration.scope);
                     })
@@ -464,6 +467,7 @@
                     });
             });
         }
+        */
 
         // PWA Install Prompt
         let deferredPrompt;
