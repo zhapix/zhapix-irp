@@ -55,6 +55,22 @@
         document.querySelector('.hero').addEventListener('mouseleave', () => {
             grid.style.transform = 'translate(0,0)';
         });
+
+        // Zoho login function
+        function loginWithZoho() {
+            window.location.href = 'https://zhapix-dev.el.r.appspot.com/auth/zoho/login';
+        }
+
+        // Login button click event listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginButton = document.querySelector('.btn-login');
+            if (loginButton) {
+                loginButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    loginWithZoho();
+                });
+            }
+        });
     </script>
 
 
