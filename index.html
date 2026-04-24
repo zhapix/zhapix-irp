@@ -13,9 +13,9 @@
     <meta name="apple-mobile-web-app-title" content="Zhapix IRP" />
     <meta name="application-name" content="Zhapix IRP" />
     <meta name="msapplication-TileColor" content="#2979ff" />
-    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-config" content="./browserconfig.xml" />
     
-    <!-- PWA Manifest -->`
+    <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32x32.png" />
@@ -24,14 +24,7 @@
     <title>Industry Readiness Program – Zhapix</title>
     <link rel="icon" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script>
-
-        function loginWithZoho() {
-            window.location.href = 'https://zhapix-dev.el.r.appspot.com/auth/zoho/login';
-        }
-    </script>
-
+  <link rel="stylesheet" crossorigin href="./assets/main-BmtXubBV.css">
 </head>
 
 <body>
@@ -42,9 +35,9 @@
             <a href="#" class="logo" aria-label="Zhapix Home"
                 onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); setTimeout(() => location.reload(), 500);"
                 title="Zhapix IRP">
-                <img src="assets/white_text_logo.png" alt="Zhapix" style="height:49px;width:auto;">
+                <img src="./assets/white%20text%20logo-CqWR6yoP.png" alt="Zhapix" style="height:49px;width:auto;">
             </a>
-            <span onclick="loginWithZoho();" class="btn-login">Login</span>
+            <span class="btn-login">Login</span>
         </div>
     </nav>
 
@@ -58,7 +51,7 @@
         <div class="hero__content">
             <h1 class="hero__title">Industry Readiness Program</h1>
             <p class="hero__desc">Ready to launch your journey into the IT world of your dreams?</p>
-            <a href="https://forms.zhapix.com/zhapix/form/IndustryReadinessProgram/formperma/Z4_EwT_Z39xYLJvcsZredeZYDDczXJsLLbadf8ahW8Q"
+            <a href="https://forms.zhapix.com/zhapix/form/IndustryReadinessProgram/formperma/Z4_EwT_Z39xYLJvcsZredeZYDDczXJsLLbadf8ahW8Q" id="apply-now-link"
                 class="btn-apply" role="button" target="_blank" rel="noopener noreferrer">Apply Now</a>
         </div>
 
@@ -77,6 +70,22 @@
 
         document.querySelector('.hero').addEventListener('mouseleave', () => {
             grid.style.transform = 'translate(0,0)';
+        });
+
+        // Zoho login function
+        function loginWithZoho() {
+            window.location.href = 'https://zhapix-dev.el.r.appspot.com/auth/zoho/login';
+        }
+
+        // Login button click event listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginButton = document.querySelector('.btn-login');
+            if (loginButton) {
+                loginButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    loginWithZoho();
+                });
+            }
         });
     </script>
 
@@ -98,7 +107,7 @@
                 </p>
             </div>
             <div class="about__image">
-                <img src="assets/about-building.png" alt="Zhapix Office Building" />
+                <img src="./assets/about-building-DSR7-GJZ.png" alt="Zhapix Office Building" />
             </div>
         </div>
     </section>
@@ -108,7 +117,7 @@
     <section class="mentor" data-testid="about-mentor">
         <div class="mentor__container">
             <div class="mentor__image">
-                <img src="assets/mentor-photo.png" alt="Vijayan Thanigaivelu" />
+                <img src="./assets/mentor-photo-BCtnGgMC.png" alt="Vijayan Thanigaivelu" />
             </div>
             <div class="mentor__content">
                 <h2 class="mentor__title">About Mentor</h2>
@@ -456,70 +465,6 @@
                 </div>
             </div>
         </div>
-
-    <!-- PWA Service Worker Registration -->
-    <script>
-
-        /* To be reverted back once we deploy in main domain
-
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    })
-                    .catch(error => {
-                        console.log('ServiceWorker registration failed: ', error);
-                    });
-            });
-        }
-        */
-
-        // PWA Install Prompt
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            
-            // Show install button or banner here
-            console.log('Install prompt ready');
-            
-            // Example: Show install button after 3 seconds
-            setTimeout(() => {
-                const installBtn = document.createElement('button');
-                installBtn.textContent = 'Install App';
-                installBtn.style.cssText = `
-                    position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    background: #2979ff;
-                    color: white;
-                    border: none;
-                    padding: 12px 24px;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    font-weight: 600;
-                    z-index: 9999;
-                    box-shadow: 0 4px 12px rgba(41, 121, 255, 0.3);
-                `;
-                
-                installBtn.addEventListener('click', () => {
-                    deferredPrompt.prompt();
-                    deferredPrompt.userChoice.then((choiceResult) => {
-                        if (choiceResult.outcome === 'accepted') {
-                            console.log('User accepted the install prompt');
-                        } else {
-                            console.log('User dismissed the install prompt');
-                        }
-                        deferredPrompt = null;
-                        installBtn.remove();
-                    });
-                });
-                
-                document.body.appendChild(installBtn);
-            }, 3000);
-        });
-    </script>
 
 </body>
 
