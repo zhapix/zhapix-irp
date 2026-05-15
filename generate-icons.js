@@ -30,7 +30,7 @@ try {
     { name: 'icon-512x512.png', size: 512 }
   ];
 
-  const sourceLogo = 'assets/white text logo.png';
+  const sourceLogo = 'assets/white-text-logo.png';
   const outputDir = 'assets/icons';
 
   async function generateIcons() {
