@@ -15,7 +15,7 @@
     <meta name="application-name" content="Zhapix IRP" />
     <meta name="msapplication-TileColor" content="#2979ff" />
     <meta name="msapplication-config" content="./browserconfig.xml" />
-    
+
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
 
@@ -32,7 +32,7 @@
             <a href="#" class="logo" aria-label="Zhapix Home"
                 onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); setTimeout(() => location.reload(), 500);"
                 title="Zhapix IRP">
-                <img src="./assets/white%20text%20logo-CqWR6yoP.png" alt="Zhapix" style="height:49px;width:auto;">
+                <img src="public/assets/white_text_logo.png" alt="Zhapix" style="height:49px;width:auto;">
             </a>
             <span class="btn-login">Login</span>
         </div>
@@ -48,8 +48,8 @@
         <div class="hero__content">
             <h1 class="hero__title">Industry Readiness Program</h1>
             <p class="hero__desc">Ready to launch your journey into the IT world of your dreams?</p>
-            <a href="https://forms.zhapix.com/zhapix/form/IndustryReadinessProgram/formperma/Z4_EwT_Z39xYLJvcsZredeZYDDczXJsLLbadf8ahW8Q" id="apply-now-link"
-                class="btn-apply" role="button" target="_blank" rel="noopener noreferrer">Apply Now</a>
+            <a href="https://forms.zhapix.com/zhapix/form/IndustryReadinessProgram/formperma/Z4_EwT_Z39xYLJvcsZredeZYDDczXJsLLbadf8ahW8Q" id="apply-now-link" class="btn-apply" role="button" target="_blank"
+                rel="noopener noreferrer">Apply Now</a>
         </div>
 
     </section>
@@ -75,10 +75,10 @@
         }
 
         // Login button click event listener
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const loginButton = document.querySelector('.btn-login');
             if (loginButton) {
-                loginButton.addEventListener('click', function(e) {
+                loginButton.addEventListener('click', function (e) {
                     e.preventDefault();
                     loginWithZoho();
                 });
